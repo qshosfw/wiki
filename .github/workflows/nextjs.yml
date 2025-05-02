@@ -1,4 +1,4 @@
-# .github/workflows/deploy.yml
+# .github/workflows/nextjs.yml
 
 name: Deploy Nextra Site to GitHub Pages
 
@@ -51,6 +51,8 @@ jobs:
                        # Nextra often configures Next.js for static export.
                        # Ensure your package.json's build script creates a static site
                        # (usually in the 'out' directory).
+      - name: Export Nextra Site
+        run: pnpm export
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
