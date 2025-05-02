@@ -4,7 +4,10 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
+  basePath: '/wiki',
+  assetPrefix: '/wiki/',
   images: {
     unoptimized: true,
   },
+  trailingSlash: true, // optional but recommended for GitHub Pages
 })
